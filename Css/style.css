@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@800&family=Meow+Script&family=Nunito&family=Roboto:wght@300&family=Work+Sans:ital,wght@1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito',sans-serif;
+}
+
+html{
+    
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+    }
+
+body{
+    width: 100%;
+}
+
+:root{
+    --yellow:#ffc200;
+    --black:#131415;
+    --white:#ffffff;
+}
+
+/* contenedor de todo y que si nos vamos no se agrande la pantalla*/
+.section-container{
+    background-color: var(--white);
+}
+
+/* seccion para que tengan todos las secciones las mismas caracteristicas
+la seccion en si se centra respecto al contenedor de afuera*/
+.section{
+    display: flex;
+    /* centro lo de adentro de las secciones*/
+    justify-content: center;
+    align-items: center;
+    /* para centrarlo en el contenedor sino lo ponemos queda todo al costado*/
+   margin: 0 auto;
+/* padding para todas las secciones 70 arriba y abajo y 0 a los costados
+con esto genero un espacio entre las secciones sin utilizar un height automatico se recomienda
+no usar height para las secciones porque sino se rompe al hacer el responsive*/
+padding: 70px 0px;
+/*ancho de 95 para que no ocupe todo*/
+width: 95%;
+/*ancho maximo de 1300px para limitar las secciones el resto espacio en negro*/
+max-width: 1300px;
+}
+
+button{
+    background-color: var(--black);
+    border: 0px solid blue;
+    outline: none;
+    /* ancho y alto*/
+    width: 180px;
+    height: 40px;
+    color:var(--yellow);
+    font-weight: 700;
+    font-size: 14px;
+    cursor:pointer;
+    transition: all 0.4s linear;
+}
+
+button:hover{
+    background-color: #5d00c7;
+    transition: all 0.4s linear;
+}
+
+/*secciones que van a compartir estilos de titulos*/
+.section-title{
+    /*los titulos deben tener una fuente pesada*/
+    font-weight: 700;
+    font-size: 32px;
+}
+
+/*estilos para los parrafos de las secciones*/
+.section-p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.section-p-small{
+    font-size:15px;
+    font-weight: 300;
+}
+
+/* header */
+
+.header-container{
+  position:sticky;
+  top: 0%;
+  z-index: 9999;
+}
+
+.header{
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 75px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+
+
+.logo-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img{
+    height: 80%;
+}
+
+.navbar,.navbar-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list{
+    
+    gap: 30px;
+}
+
+.navbar i{
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+   display: none;
+   z-index: 9999;
+
+}
+.navbar a:hover {
+    color: rgb(0, 3, 1);
+    border-top:solid rgb(102, 81, 199) 2px;
+    border-left:solid rgb(102, 81, 199) 2px;
+    border-right: solid rgb(102, 81, 199) 2px;
+    border-bottom:solid rgb(102, 81, 199) 2px;
+    background-color: #00ccff;
+    font-size: 20px;
+    transition: 0.5s;
+    opacity: 100%; 
+    padding: 5px;
+}
+
+
+#toggle-menu{
+    display: none;
+}
+
+
+.navbar a{
+    color: blue;
+    font-size: 22px;
+}
+
+.navbar-list li:last-child > a{
+    border: 2px solid black;
+    font-size: 18px;
+    padding: 5px 40px;
+    border-radius: 3px;
+    transition: all 0.3s linear;
+}
+
+.navbar-list li:last-child > a:hover{
+    background-color: blue;
+    color: var(--white);
+    transition: all 0.3s linear;
+    font-weight: 300;
+}
+
+
+@media(max-width: 992px){
+    .header{
+        padding: 0px 20px 0px 10px;
+    }
+    
+    .navbar i{
+        display: block;
+        color: blueviolet;
+    }
+
+    .navbar a{
+        color:blueviolet;;
+    }
+
+    
+    .navbar-list{
+        position: absolute;
+        background-color: var(--white);
+        flex-direction: column;
+        top: 100px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+         display:none;
+        z-index: 9999;
+
+    }
+
+    .navbar-list li:last-child >a{
+        font-size: 22px;
+    }
+
+    .navbar-list li:last-child > a{
+        border: none;
+    }
+
+    #toggle-menu:checked + .navbar-list {
+        display: flex;
+    }
+}
+
+/* nosotros*/
+
+#nosotros {
+     display: flex;
+     align-items: center;
+     /*los otros atributos son del section*/
+     justify-content: space-between;
+     /*para que se baje la imagen en caso de que sea necesario lo que hace es 
+     cuando no hay mas espacios para los elementos se los baja a una linea siguiente*/
+     flex-wrap: wrap;
+     gap: 30px;
+     padding: 70px 50px;
+    
+ }
+ 
+ .description-container{
+     display: flex;
+     flex-direction: column;
+     /* el primer 1 significa agrandate todo lo que te puedas agrandar
+     el segundo 1 achicate todo lo que te puedas achicar
+     y el 50 achicate hasta un 50% para acomodarse al espacio que tiene
+     en el responsive*/
+     flex: 1 1 50%;
+     gap:20px
+ }
+ 
+ .text-container{
+ /*lo que hace el max-width con dos valores es poner dos valores maximos
+ si uno supera al otro se usa ese y sino se usa el otro se va a ir acomodando solo
+ se utiliza para max asi como para min */
+ max-width: max(70%, 200px);
+ gap: 45px;
+ }
+ 
+ .text-container h1{
+     font-weight: 200;
+     font-size: 25px;
+     line-height: 45px;
+ }
+ 
+ .text-container p{
+     font-size: 18px;
+     font-weight: 300;
+     color: blue;
+     text-align: justify;
+ }
+ 
+ .nosotros-img {
+     background-image: url(../Img/inicio.JPG);
+     background-position: center;
+     /*que la imagen no se repita*/
+     background-repeat: no-repeat;
+     /*que cubra todo*/
+     background-size: cover;
+     min-width: 200px;
+     /*lo ideal es que la imagen sea del 30px
+     pero si es menor a 250 px no quiero que se achique mas que eso*/
+     width: 30%;
+     height: 250px;
+ }
+ 
+
+ @media (max-width: 768px) 
+ {
+ 
+
+    #nosotros{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+     
+
+    }
+
+   .nosotros-img{
+        display: none;
+    }
+
+     .description-container{
+         justify-content: space-between;
+         align-items: center;
+     }
+ 
+     .text-container{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         text-align: justify;
+         align-items: center;
+         text-align: center;
+         padding: 70px 0px ;
+     }
+ }
+ 
+ #objetivo{
+     /*espaciado entre la imagen y el contenido para que se adapte al responsive*/
+     gap: 100px;
+     /*para que se comode al contenido la imagen para arriba, contenido para abajo*/
+     flex: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 50px;
+ }
+ 
+ .objetivo-img{
+
+     background-image: url(../Img/nosotros.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 250px;
+     width: 300px;
+     min-width: 200px;
+ 
+ }
+ .objetivo-content{
+     /* aca ponemos el mismo width y height que la imagen*/
+     height: 250px;
+     width: 300px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .objetivo-p{
+        font-weight: 300;
+        font-size: 17px;
+        color: blue;
+        text-align: justify;
+}
+
+ 
+ @media (max-width:768px){
+ 
+     #objetivo{
+        flex-direction: column;
+        gap: 20px;
+        width: min(320px, 100%);
+ 
+     }
+
+ .description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    align-items: center;
+    text-align: center;
+}
+
+
+ }
+
+ /* Productos */
+
+#productos{
+    flex-direction: column;
+    gap: max(120px, 10%);
+
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 25%;
+    /*width 100 por 100 de su contenedor*/
+    width: 100%;
+}
+
+.productos-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*sino hay mas espacio que se bajen solas*/
+    flex-wrap: wrap;
+    /*ocupe el 75% de el contenedor de la seccion*/
+    width: 75%;
+    /*espacio entre las cards*/
+    gap: 140px;
+    
+}
+
+.productos-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: blue;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    padding:160px 10px 0px 10px;
+    text-align: justify;
+     
+}
+
+.productos-card h3{
+    text-align: center;
+    color: #131415;
+}
+
+.productos-card-img{
+    width: 96%;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 300;
+    color: var(--grey);
+    /*para que funcione el absolute debe haber antes un position relative*/
+    position: absolute;
+    top: -50px;
+    background-size: cover;
+}
+
+.productos-card:first-child .productos-card-img{
+
+    background-image: url(../Img/medialunas.jpg);
+    
+
+}
+.productos-card:nth-child(2) .productos-card-img{
+
+    background-image: url(../Img/vigilantesdemanteca.jpg);
+}
+.productos-card:nth-child(3) .productos-card-img{
+
+    background-image: url(../Img/criollitos.jpg);
+}
+.productos-card:nth-child(4) .productos-card-img{
+
+    background-image: url(../Img/panmignon.jpg);
+}
+.productos-card:nth-child(5) .productos-card-img{
+
+    background-image: url(../Img/baguette.jpg);
+}
+.productos-card:nth-child(6) .productos-card-img{
+
+    background-image: url(../Img/torta.jpg);
+}
+
+.productos-card h3{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+@media (max-width:992px)
+{
+    .productos-card-container{
+        width: 100%;
+    }
+    
+    
+}
+
+@media (max-width:768px)
+{
+    #productos{
+        align-items: center;
+        justify-content: center;
+    }
+  
+    /*para acomodar las cards*/
+    .productos-card{
+        width: min(320px, 100%);
+    }
+}
+   
+/*ContactoS*/
+#contacto{
+    flex-direction: column;
+    width: min(600px,90%);
+    gap:50px;
+ }
+
+.contacto-title-container{
+    text-align: center;
+    width: 85%;
+
+}
+
+
+.divider{
+    width:min(90% ,600px) ;
+    /* para que se separe un poco mas del gap que tenia*/
+    margin-top: 50px;
+    height: 3px;
+    background-color: green;
+}
+@media (max-width:1200px){
+    .contact-container{
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+}
+
+/* Form contacto */
+.contacto-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60vw;
+    background-color: #ffc200;
+    border-style: double;
+    padding:50px 20px;
+  
+
+}
+.contacto-button{
+    width: 20vw;
+    height: 50px;
+    background-color: var(--black);
+    color:var(--yellow);
+}
+
+@media (max-width:576px){
+    .contacto-card{
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 30px 0px;
+        text-align: center;
+        gap: 15px;
+    }
+}
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1300px;
+    margin:0 auto;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 30px;
+    }
+
+    .footer-msg{
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        max-width: 450px;
+    }
+
+    .footer-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /*se alinea al final el texto*/
+        align-items: flex-end;
+        font-size: 14px;
+        min-height: 100px;
+    }
+
+   
+    .footer-social{
+        margin-left: 10px;
+
+    }
+
+    .footer-terms{
+      display: flex;
+      gap: 25px;
+
+    }
+
+    .footer-terms a{
+
+        color: white;
+        font-weight: 300;
+
+    }
+
+    @media (max-width:945px){
+        .footer{
+            gap:48px
+        }
+
+        .footer-msg{
+            max-width: 600px;
+            text-align: center;
+            
+
+        }
+        .footer-info{
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-terms{
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+  
+   
+
+
+ 
+ 

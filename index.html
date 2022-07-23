@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+    <div class="section-container header-container">
+        <header class="header">
+          <div class="logo-container">
+            <img src="../Img/logo.jpg" alt="logo" />
+          </div>
+          <nav class="navbar">
+            <label for="toggle-menu"><i class="fas fa-bars"></i></label>
+            <!-- el id debe ser igual al for del label-->
+            <input type="checkbox" id="toggle-menu" />
+            <ul class="navbar-list">
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#objetivo">Objetivo</a></li>
+              <li><a href="#productos">Productos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+       <!-- Nosotros-->
+    <div class="section-container">
+        <section class="section" id="nosotros">
+            <div class="description-container">
+            
+             <div class="text-container">
+                <h1>BAKERY HOME MADE</h1>
+                <h2>#72 AÑOS leudando una gran marca</h2>
+                <p>Somos Bakery Una Panaderia dedicada a la elaboracion y produccion de productos artesanales de panaderia 
+                        hechos como si los hicieras en casa 
+                  </p>
+                </div>
+             </div>
+             <div class="nosotros-img"></div>
+           </section>
+      </div>
+      <!-- Objetivo-->
+      <div class="section-container">
+        <section class="section" id="objetivo">
+          <div class="objetivo-img"></div>
+            <div class="objetivo-content">
+              <h2 class="section-title">#Nuestro Objetivo</h2>
+              <p class="objetivo-p">
+                Mantener la calidad en cada producto, para seguir creciendo como empresa.
+                Nuestra mayor convicción es buscar siempre el mejor producto para lograr la satisfacción de nuestros clientes.
+                 Por eso mantenemos distintos estándares de calidad, para los diferentes productos de nuestra panadería.
+              </p>
+            </div>
+        </div>
+          </div>
+        </section>
+    </div>
+     <!--Productos-->
+     <div class="section-container">
+      <section class="section" id="productos">
+        <div class="title-container">
+          <h2 class="section-title">#Estas Son Las Especialidades De La Casa</h2>
+        </div>
+        <div class="productos-card-container">
+          <div class="productos-card">
+            <div class="productos-card-img"></div>
+            <div class="productos-content">
+              <h3>#Medialunas</h3>
+              <p class="section-p-small">
+                Las medialunas de grasa son presencia obligada en cualquier buena panadería argentina. 
+                Similares a las muy conocidas medialunas de manteca, tienen un sabor más salado y una textura más crujiente
+              </p>
+            </div>
+          </div>
+          <div class="productos-card">
+            <div class="productos-card-img"></div>
+            <div class="productos-content">
+              <h3>#Vigilantes</h3>
+              <p class="section-p-small">
+                Estos pliegues de masa salada endulzada con almíbar y azúcar blanca son crocantes por fuera y suavecitos 
+                por dentro, con una textura hojaldrada capaz de enamorar a cualquiera. 
+              </p>
+            </div>
+          </div>
+          <div class="productos-card">
+            <div class="productos-card-img"></div>
+            <div class="productos-content">
+              <h3>#Pan Criollo</h3>
+              <p class="section-p-small">
+                Los criollitos son unos típicos panes de hojaldre perfectos para el 
+                desayuno o la merienda de la tarde, muy ricos, y económicos,
+                amasados y elaborados artesanalmente en nuestra panaderia.
+              </p>
+            </div>
+          </div>
+          <div class="productos-card">
+            <div class="productos-card-img"></div>
+            <div class="productos-content">
+              <h3>#Pan Mignon Frances</h3>
+              <p class="section-p-small">
+                Pan Mignon, no hay nada más placentero que comerlo calentito y recién
+                salidos del horno, es un pan con características similares a la baguette 
+                la diferencia es que son más pequeños
+              </p>
+            </div>
+          </div>
+          <div class="productos-card">
+            <div class="productos-card-img"></div>
+            <div class="productos-content">
+              <h3>#Pan Baguette</h3>
+              <p class="section-p-small">
+                La baguette es una variedad de pan originaria de Francia
+                que se caracteriza por una forma alargada. Es uno de los formatos de pan más conocidos, 
+               producidos y consumidos a nivel internacional.
+              </p>
+            </div>
+          </div>
+          <div class="productos-card">
+            <div class="productos-card-img"></div>
+            <div class="productos-content">
+              <h3>#Tortas</h3>
+              <p class="section-p-small">
+                Tambien podra encontrar gran variedad de tortas.
+                Las hacemos a pedido del cliente para fiestas y eventos
+                ,realiza tu pedido con anticipacion para que no te quedes sin ella
+                y puedas disfrutar de estas exquisiteces.
+              </p>
+            </div>
+          </div>
+      </section>
+    </div>
+    <!--contacto-->
+    <div class="section-container">
+      <section class="section" id="contacto">
+        <div class="contacto-title-container">
+         <h2 class="section-title">#Contactanos</h2>
+         <h3>Llena El Formulario Y Contactate Con Nosotros</h3>
+        </div>
+        <div class="contacto-form">
+           
+              <form>
+
+                <label for="nombre">Nombre Y Apellido:</label>
+                <input id="nombre" type="text" placeholder="Nombre Y Apellido...">
+
+                <label for="email">Tu Email:</label>
+                <input id="email" type="email" placeholder="Email...">
+      
+                <label for="asunto">Asunto:</label>
+                <input id="asunto" type="text" placeholder="Asunto en cuestion...">
+      
+                <label for="mensaje">Mensaje:</label>
+                <input id="mensaje" type="text" placeholder="Dejanos tu mensaje...">
+      
+                <button class="contacto-button">Enviar</button>
+      
+              </form>
+           
+          </div>
+        <span class="divider"></span>
+      </section>
+      </div>
+     <!--footer-->
+     <div class="section-container">
+      <footer class="footer">
+        <div class="footer-msg">
+          <p>
+            Gracias Por Visitar Nuestra Pagina!!!
+          </p>
+        </div>
+        <div class="footer-info">
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <p class="footer-copyright">Bakery Home Made @2022</p>
+          <div class="footer-terms">
+            <a href="#">Privacidad</a>
+            <a href="#">Terminos de Uso</a>
+            <a href="#">Contactanos</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+</body>
+</html>
